@@ -18,7 +18,6 @@ router.get('/', function (req, res, next) {
   doc = User.find({username: req.user.profile.login}).then(function(userDoc){
       return userDoc;
     }).then( userDoc => {
-      console.log(userDoc)
       Post.find({username: req.user.profile.login}).then(function(posts){
       res.render('dashboard', {
         title: 'dashboard',
