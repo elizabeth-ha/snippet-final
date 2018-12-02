@@ -1,0 +1,88 @@
+/* font-family: 'Baloo Tamma', cursive;
+font-family: 'Text Me One', sans-serif;
+red: #f45042
+dark gray: #515151
+light gray: #bababa
+*/
+body {
+  font-family: 'Text Me One', sans-serif;
+  margin: 0;
+  text-transform: lowercase;
+}
+h1 {
+  font-family: 'Baloo Tamma', cursive;
+  color: #f45042;
+  text-transform: lowercase;
+}
+h2 {
+  font-family: 'Text Me One', sans-serif;
+  text-transform: lowercase;
+  letter-spacing: 4px;
+  font-size: 20px;
+}
+input, textarea {
+  font-family: 'Text Me One', sans-serif;
+  font-size: 16px;
+  padding: 4px;
+  border: 1px solid #e5e5e5;
+}
+input:focus, button:focus, textarea:focus {
+  outline: none;
+}
+header {
+  padding: 10px 10px;
+  border-bottom: 1px solid #515151;
+  position: relative;
+}
+.body {
+  position: relative;
+  width: 60%;
+  min-width: 600px;
+  margin: 40px 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+#title {
+  display: inline;
+  margin: 4px 8px 0;
+}
+#title:hover {
+  cursor: pointer;
+}
+#menu {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translate(0, -50%);
+}
+#menu a {
+  text-transform: lowercase;
+  color: #515151;
+  text-decoration: none;
+  margin: 0 8px;
+  transition: all 0.5s ease;
+}
+#menu a:hover {
+  color: #f45042;
+  cursor: pointer;
+}
+
+/* add snippet page */
+.add-input {
+  width: 100%;
+  margin: 8px 0;
+}
+#postBody {
+  height: 30vh;
+}
+
+.review, .snippet {
+  width: 100%;
+  padding: 12px;
+  background: #f1f1f1;
+  margin: 12px 0;
+  border-top: 2px solid #f45042;
+}
+.snippet {
+  margin: 24px 0;
+}

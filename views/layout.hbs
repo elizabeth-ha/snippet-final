@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Tamma|Text+Me+One" rel="stylesheet">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <header>
+      <h1 id="title" onclick="window.location.href='/'">Snippet</h1>
+      <div id="menu">
+        {{#if user}}
+          <a href="/add-snippet">new</a>
+        {{/if}}
+        <a href="/review">reviews</a>
+        <a href="/about">about</a>
+        {{#if user}}
+          <a href="/dashboard">my profile</a>
+          <a href="/logout">Sign out</a>
+        {{else}}
+          <a class="login-link" href="/login">Sign in</a>
+        {{/if}}
+      </div>
+    </header>
+    <main>
+      <!-- <div class="container">
+        <div class="row"> -->
+        <div class="body">
+          <h2>{{title}}</h2>
+          {{{body}}}
+        </div>
+        <!-- </div>
+      </div> -->
+    </main>
+  </body>
+</html>

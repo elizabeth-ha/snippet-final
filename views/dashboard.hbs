@@ -1,0 +1,16 @@
+<h2>{{user.profile.firstName}}'s Snippet</h2>
+{{#each user1}}
+<p>{{bio}}</p>
+{{/each}}
+<button onclick="window.location.href='/edit-profile'">edit profile</button>
+<button onclick="window.location.href='/add-review'">review snippet</button>
+<dl>
+
+{{#each posts}}
+  <div class="snippet">
+    <h2>{{postTitle}}</h2>
+    <h3>by: {{username}}</h3>
+    <p>{{postBody}}</p>
+  </div>
+{{/each}}
+</dl>
