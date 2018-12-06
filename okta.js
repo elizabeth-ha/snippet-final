@@ -1,4 +1,6 @@
 const okta = require('@okta/okta-sdk-nodejs')
+var async = require('asyncawait/async');
+var await = require('asyncawait/await');
 
 const client = new okta.Client({
   orgUrl: process.env.ORG_URL,
