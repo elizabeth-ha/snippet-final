@@ -2,7 +2,7 @@ const okta = require('@okta/okta-sdk-nodejs')
 
 const client = new okta.Client({
   orgUrl: process.env.ORG_URL,
-  token: process.env.USER_PROFILE_TOKEN,
+  token: process.env.USER_PROFILE_TOKEN
 })
 
 const middleware = async (req, res, next) => {
