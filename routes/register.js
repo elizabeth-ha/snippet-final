@@ -18,7 +18,7 @@ router.get('/', (req, res, next) => {
   res.render('register', { title })
 })
 
-router.post('/', function (req, res, next) => {
+router.post('/', function (req, res, next) {
   try {
     client.createUser({
       profile: {
