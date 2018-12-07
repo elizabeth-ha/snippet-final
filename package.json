@@ -27,6 +27,7 @@
     "nodemon": "^1.17.5"
   },
   "devDependencies": {
+    "@babel/plugin-transform-async-to-generator": "^7.2.0",
     "babel-eslint": "^10.0.1",
     "chai": "^4.2.0",
     "eslint": "^4.19.1",
