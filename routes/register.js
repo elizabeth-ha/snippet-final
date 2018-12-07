@@ -25,7 +25,7 @@ router.get('/', (req, res, next) => {
 
 router.post('/', (async (function (req, res, next) {
   try {
-    await client.createUser({
+    await (client.createUser({
       profile: {
         firstName: req.body.firstName,
         lastName: req.body.lastName,
@@ -37,7 +37,7 @@ router.post('/', (async (function (req, res, next) {
           value: req.body.password,
         },
       },
-    })
+    }))
 
     res.redirect('/dashboard')
   } catch ({ errorCauses }) {
