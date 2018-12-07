@@ -1,5 +1,7 @@
 const okta = require('@okta/okta-sdk-nodejs')
 const express = require('express')
+var async = require('asyncawait/async');
+var await = require('asyncawait/await');
 
 const router = express.Router()
 

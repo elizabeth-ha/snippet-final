@@ -7,7 +7,7 @@ router.get('/', function (req, res, next) {
     const { profile } = req.user
   }
 
-  res.render('about', {title:'about snippet'})
+  res.render('about', {title:'about snippet!'})
 })
 
 module.exports = router
