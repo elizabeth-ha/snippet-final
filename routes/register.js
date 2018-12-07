@@ -18,9 +18,9 @@ router.get('/', (req, res, next) => {
   res.render('register', { title })
 })
 
-router.post('/', async (req, res, next) => {
+router.post('/', function (req, res, next) => {
   try {
-    await client.createUser({
+    client.createUser({
       profile: {
         firstName: req.body.firstName,
         lastName: req.body.lastName,
