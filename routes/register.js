@@ -1,7 +1,5 @@
 const okta = require('@okta/okta-sdk-nodejs')
 const express = require('express')
-var async = require('asyncawait/async');
-var await = require('asyncawait/await');
 
 const router = express.Router()
 
@@ -19,13 +17,10 @@ router.get('/', (req, res, next) => {
 
   res.render('register', { title })
 })
-// (async (function testingAsyncAwait() {
-//     await (console.log("For Trump's Sake Print me!"));
-// }))();
 
-router.post('/', (async (function (req, res, next) {
+router.post('/', async (req, res, next) => {
   try {
-    await (client.createUser({
+    await client.createUser({
       profile: {
         firstName: req.body.firstName,
         lastName: req.body.lastName,
@@ -37,7 +32,7 @@ router.post('/', (async (function (req, res, next) {
           value: req.body.password,
         },
       },
-    }))
+    })
 
     res.redirect('/dashboard')
   } catch ({ errorCauses }) {
@@ -54,6 +49,6 @@ router.post('/', (async (function (req, res, next) {
 
     res.render('register', { title, errors, body: req.body })
   }
-})))();
+})
 
 module.exports = router
