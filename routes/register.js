@@ -19,8 +19,11 @@ router.get('/', (req, res, next) => {
 
   res.render('register', { title })
 })
+// (async (function testingAsyncAwait() {
+//     await (console.log("For Trump's Sake Print me!"));
+// }))();
 
-router.post('/', async function (req, res, next) {
+router.post('/', (async (function (req, res, next) {
   try {
     await client.createUser({
       profile: {
@@ -51,6 +54,6 @@ router.post('/', async function (req, res, next) {
 
     res.render('register', { title, errors, body: req.body })
   }
-})
+})))();
 
 module.exports = router
