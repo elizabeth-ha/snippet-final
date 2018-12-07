@@ -14,9 +14,9 @@ router.get('/', (req, res, next) => {
   res.render('reset-password', { title })
 })
 
-router.post('/', async (req, res, next) => {
+router.post('/', function (req, res, next) {
   try {
-    const user = await client.getUser(req.body.email)
+    const user = client.getUser(req.body.email)
 
     await user.resetPassword()
 
