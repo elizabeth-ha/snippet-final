@@ -7,10 +7,21 @@ const client = new okta.Client({
   token: process.env.USER_PROFILE_TOKEN
 })
 
-const middleware = async (req, res, next) => {
+// const middleware = async (req, res, next) => {
+//   if (req.userinfo) {
+//     try {
+//       req.user = await client.getUser(req.userinfo.sub)
+//     } catch (error) {
+//       console.log(error)
+//     }
+//   }
+//
+//   next()
+// }
+const middleware = function (req, res, next) {
   if (req.userinfo) {
     try {
-      req.user = await client.getUser(req.userinfo.sub)
+      req.user = client.getUser(req.userinfo.sub)
     } catch (error) {
       console.log(error)
     }
